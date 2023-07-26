@@ -26,10 +26,7 @@ jobs:
         key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
         restore-keys: ${{ runner.os }}-m2
 
-    - name: Build with Maven
-      run: mvn -B verify --file pom.xml
-
-    - name: Test
+    - name: Build maven Test
       run: mvn clean verify
 
     - name: Publicar informes de Serenity
