@@ -21,7 +21,7 @@ public class PostCodeStepDefinitions {
 
     @Then("the resulting location should be {} in {}")
     public void theResultingLocationShouldBe(String placeName, String country) {
-        restAssuredThat(response -> response.statusCode(200));
+        restAssuredThat(response -> response.statusCode(500));
         restAssuredThat(response -> response.body(LocationResponse.COUNTRY, equalTo(country)));
         restAssuredThat(response -> response.body(LocationResponse.FIRST_PLACE_NAME, equalTo(placeName)));
     }
