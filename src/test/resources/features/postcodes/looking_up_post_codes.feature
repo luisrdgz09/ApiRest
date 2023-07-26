@@ -1,5 +1,5 @@
 Feature: Looking up post codes
-
+  @test
   Scenario Outline: Looking up US locations by post code
     When I look up a post code <Post Code> for country code <Country Code>
     Then the resulting location should be <Place Name> in <Country>
