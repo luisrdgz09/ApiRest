@@ -30,4 +30,10 @@ jobs:
       run: mvn -B verify --file pom.xml
 
     - name: Test
-      run: mvn clean verify test
+      run: mvn clean verify
+
+    - name: Publicar informes de Serenity
+      uses: actions/upload-artifact@v2
+      with:
+        name: serenity-reports
+        path: target/site/serenity/index.html
